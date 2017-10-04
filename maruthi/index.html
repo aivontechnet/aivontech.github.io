@@ -65,10 +65,39 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style type="text/css">
+        @-webkit-keyframes swinging {
+            0%{-webkit-transform: rotate(15deg);}
+            50%{-webkit-transform: rotate(0deg)}
+            100%{-webkit-transform: rotate(15deg);}
+        }
 
+        @keyframes swinging {
+            0%{transform: rotate(15deg);}
+            50%{transform: rotate(0deg)}
+            100%{transform: rotate(15deg);}
+        }
+        #cisf-wrapper {
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            margin-left: -630px;
+            z-index: 160;
+        }
+        #cisf-logo {
+            height: 270px;
+            -webkit-transform-origin: 8% 13%;
+            transform-origin: 8% 13%;
+            -webkit-animation: swinging 5s ease-in-out forwards infinite;
+            animation: swinging 5s ease-in-out forwards infinite;
+        }
+    </style>
+	
 	</head>
 	<body>
-
+<div id="cisf-wrapper">
+<a href="http://cisf.lk/" target="_blank"><img src="cisf-logo-2.png" id="cisf-logo" class="visible-lg visible-xl"></a>
+</div>
 	<div id="fh5co-container">
 		<div id="fh5co-home" class="js-fullheight" data-section="home">
 
@@ -133,13 +162,13 @@
 							
 							<li>
 								<blockquote>
-									<p>&ldquo;உன்னால் முடியும், Lets do it.&rdquo;</p>
+									<p>&ldquo;உன்னால் முடியும் துணிந்து தொடங்கு.&rdquo;</p>
 									<p class="quote-author">&mdash; Evano Oruvan</p>
 								</blockquote>
 							</li>
 							<li>
 								<blockquote>
-									<p>&ldquo;நம்பிக்கையோடு உன் முதலடியை எடுத்து வை.&rdquo;</p>
+									<p>&ldquo;அவசியமில்லை. முதல் படியில் ஏறு.&rdquo;</p>
 									<p class="quote-author">&mdash; Inoruthan</p>
 								</blockquote>
 							</li>

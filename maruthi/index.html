@@ -91,6 +91,20 @@
             -webkit-animation: swinging 5s ease-in-out forwards infinite;
             animation: swinging 5s ease-in-out forwards infinite;
         }
+video { 
+    position: relative;
+    top: 250px;
+    left: 50%;
+    min-width: 86%;
+    min-height: 86%;
+    width: 1400px;
+    height: 780px;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: black;
+  background-size: cover;
+  transition: 1s opacity;
+}
     </style>
 	
 	</head>
@@ -113,9 +127,23 @@
 					</div>
 				</div>
 			  	<ul class="slides">
-			   	<li style="background-image: url(images/slide_1.jpg);" data-stellar-background-ratio="0.5"></li>
-			   	<li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5"></li>
-			   	<li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5"></li>
+				
+			   	<li style="background-image: url(images/slide_1.jpg);width:1280px;height:839px;" data-stellar-background-ratio="0.5">
+				<video poster="images/slide_1.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="images/slide_1.mp4" type="video/mp4">
+</video>
+				</li>
+			   	<li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5">
+				<video poster="images/slide_2.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="images/slide_2.mp4" type="video/mp4">
+</video></li>
+			   	<li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5">
+				<video poster="images/slide_3.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="images/slide_3.mp4" type="video/mp4">
+</video></li>
 			  	</ul>
 
 			</div>

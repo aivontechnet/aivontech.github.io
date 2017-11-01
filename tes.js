@@ -115,3 +115,9 @@ function loadMotorTyps(formObj){
    configMotor();
 }
 
+
+loadCell(document.theForm);
+   loadEsc(document.theForm);
+   loadMotorTyps(document.theForm)
+   loadPropeller(document.theForm);
+alert("patched");

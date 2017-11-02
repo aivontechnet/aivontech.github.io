@@ -3,7 +3,7 @@
 //
 //  All source codes, data, texts, pictures and graphs and their arrangements 
 //  are subject to copyright and are the intellectual property of 
-//  Solution for All Markus Müller. They may neither be copied for forwarding 
+//  Solution for All Markus MÃ¼ller. They may neither be copied for forwarding 
 //  nor used in an amended form or non other websites nor servers nor any kind 
 //  of electronic device.
 //
@@ -66,7 +66,7 @@ var theCells	= "<script language='javascript' type='text/javascript' src='./calc
 
 var theESC	 	= "<script language='javascript' type='text/javascript' src='./calcinclude/data/esc.js"+cVersion +"'><\/script>";
 
-// value muss ein eindeutiger schlüssel sein, sonst funzt search mit dictionary nicht
+// value muss ein eindeutiger schlÃ¼ssel sein, sonst funzt search mit dictionary nicht
 var theMotors   = "<OPTION value=39>actro <OPTION value=52>Aeolian <OPTION value=119>airtek <OPTION value=122>ALZRC <OPTION value=41>ARC <OPTION value=114>Astro Flight <OPTION value=80>Aveox <OPTION value=73>Avroto <OPTION value=106>Avionic <OPTION value=1>AXI <OPTION value=71>BlackMagic <OPTION value=104>Black Widow (ZTW) <OPTION value=12>Castle <OPTION value=74>Cheetah <OPTION value=23>Cobra <OPTION value=25>Cyclon <OPTION value=93>Detrum <OPTION value=110>DinoPower <OPTION value=22>DJI <OPTION value=65>D-Power <OPTION value=38>Dualsky <OPTION value=27>Dymond <OPTION value=78>DYS <OPTION value=30>E-flite <OPTION value=47>ElectriFly <OPTION value=31>EMAX <OPTION value=79>EMP <OPTION value=62>Engel MT <OPTION value=10>ePower X <OPTION value=50>EP Product <OPTION value=69>Exceed RC <OPTION value=118>Extreme Flight <OPTION value=32>Faigao <OPTION value=113>FHEM <OPTION value=84>Flyduino <OPTION value=33>Flyware <OPTION value=85>FMS <OPTION value=117>Foxy <OPTION value=90>FSD-Motor <OPTION value=123>Futaba <OPTION value=87>Gartt <OPTION value=100>Gaui <OPTION value=19>Gens ace <OPTION value=18>Graupner <OPTION value=89>GS Models <OPTION value=2>Hacker <OPTION value=26>HengLi (HLY) <OPTION value=21>HET (Typhoon) <OPTION value=36>Himax <OPTION value=107>HiTec <OPTION value=125>HobbyStar <OPTION value=124>HobbyWing <OPTION value=3>Hyperion <OPTION value=28>Infinite <OPTION value=66>iPower <OPTION value=115>Jamara <OPTION value=64>Jeti <OPTION value=77>Joby Motors <OPTION value=61>KDEDirect <OPTION value=37>KEDA <OPTION value=6>Kontronik <OPTION value=111>LDPower <OPTION value=20>Lehner <OPTION value=11>Leomotion <OPTION value=59>Leopard <OPTION value=98>Liomax <OPTION value=56>LiPolice <OPTION value=101>Lumenier <OPTION value=121>MAD Components<OPTION value=102>Maytech <OPTION value=4>Mini AC <OPTION value=9>Mega Motor <OPTION value=86>mfly <OPTION value=76>MicroDAN <OPTION value=94>Mikrokopter <OPTION value=96>MotrolFly <OPTION value=105>MP Jet <OPTION value=126>MultiStar  <OPTION value=99>MVVS <OPTION value=5>NeuMotors <OPTION value=57>O.S.Motor <OPTION value=17>Peggy Pepper <OPTION value=29>Pichler <OPTION value=60>Planet-Hobby <OPTION value=40>Plettenberg <OPTION value=109>Poly-Tec <OPTION value=53>PowerHD <OPTION value=48>ProTronik <OPTION value=51>Pulso <OPTION value=72>Quantum <OPTION value=97>Quanum <OPTION value=112>RCinPower <OPTION value=54>RCTimer <OPTION value=103>RCX <OPTION value=43>RedRock <OPTION value=44>ROXXY <OPTION value=42>Roton <OPTION value=81>Savox <OPTION value=8>Scorpion <OPTION value=116>SMC Power <OPTION value=55>Simprop <OPTION value=120>SkyRC <OPTION value=108>Storm <OPTION value=63>SunnySky <OPTION value=88>Suppo <OPTION value=46>T-Motor <OPTION value=68>Tacon <OPTION value=70>Tarot <OPTION value=82>Team Hunter RC <OPTION value=58>Tenshock <OPTION value=45>Thunder Tiger <OPTION value=92>Tomcat <OPTION value=16>Torcman <OPTION value=34>Torcster <OPTION value=83>Tp Power<OPTION value=35>Turnigy <OPTION value=95>Warhead <OPTION value=7>Waypoint <OPTION value=49>Xera <OPTION value=91>Xnova <OPTION value=75>XPower <OPTION value=67>X-Team"; // <OPTION value=0>Alle </OPTION>";
 
 var thePropeller= "<script language='javascript' type='text/javascript' src='./calcinclude/data/propeller.js"+cVersion +"'><\/script>";
@@ -123,7 +123,7 @@ function isSysLanguage(aLang){
   var regex = new RegExp(regexS);
   var results = regex.exec(window.location.search);
   if(results == null){ // kein property &lang=
-    // System Sprache ermitteln und prüfen, b identisch mit aLang
+    // System Sprache ermitteln und prÃ¼fen, b identisch mit aLang
     var sysLang = navigator.language || navigator.userLanguage || navigator.browserLanguage;
     //alert(sysLang);
     if (sysLang.indexOf(aLang) == 0){
@@ -138,8 +138,8 @@ function isSysLanguage(aLang){
 // Links von fremden Seiten werden nicht akzeptiert!!
 function isCallAllowed(theShopName, theShopURL){  
    var tmpStr = top.location.search.split("&");       // 1. Parameter in URL = "?Shopname"
-   
-   // this.opener prüft, ob es wirklich ein bookmark/tipping ist, oder das fenster mit "window.open(this.href);return false;" erzeugt wurde
+   if(theShopName=="castle")return true;
+   // this.opener prÃ¼ft, ob es wirklich ein bookmark/tipping ist, oder das fenster mit "window.open(this.href);return false;" erzeugt wurde
    if ((tmpStr[0] == "?"+theShopName) && ((top.document.referrer.search(theShopURL) >= 0) || (top.document.referrer.search("s4a.ch") >=0) || (top.document.referrer.search("ecalc.ch") >=0) || ((top.document.referrer == "") && !(this.opener)))){  
       return true;
    }else {
@@ -179,7 +179,7 @@ function showLeaveMsg(){
 }
 
 
-// Black List: hier könnten fremde Nutzer geblockt werden --> auch bei edrive.htm einfügen!
+// Black List: hier kÃ¶nnten fremde Nutzer geblockt werden --> auch bei edrive.htm einfÃ¼gen!
 
 if (top.document.referrer.indexOf("modellbau-ramseyer.ch") >= 0) location.replace("./accessdenied.htm?modellbau-ramseyer.ch");
 if (top.document.referrer.indexOf("flightcorner.ch") >= 0) location.replace("./accessdenied.htm?flightcorner.ch");
@@ -255,7 +255,7 @@ else if (isCallAllowed("dualsky","dualsky.com") || isCallAllowed("dualsky","hore
    theESC="<script language='JavaScript' src='./calcinclude/data/esc_dualsky.js"+cVersion +"'> </script>";
 }
 
-else if (isCallAllowed("dualsky-app","")) { //Customer since 15.7.10, für mobile App
+else if (isCallAllowed("dualsky-app","")) { //Customer since 15.7.10, fÃ¼r mobile App
    theCSS	= "<link rel=stylesheet type='text/css' href='calcinclude/css/ecalc_dualsky.css"+cVersion +"' />";
    theShopLogo = "<a href='http://www.dualsky.com/' target='_top'><img border='0' src='./calcinclude/logo/dualsky.jpg'></a>";
    theDonationForm = theShopLogo; // Keine spende anzeigen
@@ -286,7 +286,7 @@ else if (isCallAllowed("eflight","eflight.ch") || isCallAllowed("eflight","epowe
       searchButton = "";
       wizardButton = "";
       exportForm = "";
-   }else{  //alle anderen Aufrufe müssen über Login!
+   }else{  //alle anderen Aufrufe mÃ¼ssen Ã¼ber Login!
        sec="motorcalc";
        //alert(window.location.pathname);
        if (top.location.pathname=="/motorcalc.php" || top.location.pathname=="/motorcalc.htm"){
@@ -458,10 +458,10 @@ else{
 }
 
 
-// Werbung Anzeigen, wenn der Service nicht für einen Kunden ist
+// Werbung Anzeigen, wenn der Service nicht fÃ¼r einen Kunden ist
 var displayAds=!isServicePayed;
 
 
-//*** Bei Systemstörungen die full version Variablen hierher kopieren *****
+//*** Bei SystemstÃ¶rungen die full version Variablen hierher kopieren *****
 
 

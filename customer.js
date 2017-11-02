@@ -239,11 +239,11 @@ else if (isCallAllowed("castle","castlecreations.com")){ //Customer since 17.6.2
    theCSS	= "<link rel=stylesheet type='text/css' href='calcinclude/css/ecalc_castle.css"+cVersion +"' />";
    theShopLogo = "<a href='http://www.castlecreations.com' target='_top'><img border='0' src='./calcinclude/logo/castlecreations.jpg'></a>";
    theDonationForm = theShopLogo; // Keine spende anzeigen
-   theMotors   = "<OPTION value=1>AXI <OPTION value=12 selected>Castle <OPTION value=30>E-flite <OPTION value=2>Hacker <OPTION value=36>Himax <OPTION value=61>KDEDirect <OPTION value=6>Kontronik <OPTION value=11>Leomotion <OPTION value=5>NeuMotors <OPTION value=57>O.S.Motor <OPTION value=40>Plettenberg <OPTION value=47>RimFire <OPTION value=8>Scorpion";
-   theESC="<script language='JavaScript' src='./calcinclude/data/esc_castle.js"+cVersion +"'> </script>";
-   searchButton = "";
-   wizardButton = "";
-   exportForm = "";
+   //theMotors   = "<OPTION value=1>AXI <OPTION value=12 selected>Castle <OPTION value=30>E-flite <OPTION value=2>Hacker <OPTION value=36>Himax <OPTION value=61>KDEDirect <OPTION value=6>Kontronik <OPTION value=11>Leomotion <OPTION value=5>NeuMotors <OPTION value=57>O.S.Motor <OPTION value=40>Plettenberg <OPTION value=47>RimFire <OPTION value=8>Scorpion";
+   //theESC="<script language='JavaScript' src='./calcinclude/data/esc_castle.js"+cVersion +"'> </script>";
+   //searchButton = "";
+   //wizardButton = "";
+   //exportForm = "";
 }
 
 else if (isCallAllowed("dualsky","dualsky.com") || isCallAllowed("dualsky","horejsi.cz")) { //Customer since 15.7.10, Hersteller, inkl. Horejsi.cz email vom 29.10.14

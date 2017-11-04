@@ -196,7 +196,7 @@ if (top.document.referrer.indexOf("rc-terminal.de") >= 0) location.replace("./ac
 
 // Kunden Whitelabeling Default Settings
 var isServicePayed = true;        //true: payed customized eCalc version
-var withCustom = false;           //true: eCalc does allow Custom Components
+var withCustom = true;           //true: eCalc does allow Custom Components
 var isFullVersion = true;         //true: eCalc does display search & Download button
 var isFullList = true;            //true: eCalc does display the full set of components
 var withRpmTable = true;          //true: eCalc does write the RPM Table
